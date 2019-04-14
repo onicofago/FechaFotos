@@ -9,7 +9,6 @@ namespace FechaFotos.Managers
 {
     public class RegistryManager
     {
-        public string Key { get; set; }
         private RegistryKey RootLocalMachine { get; set; }
         private RegistryKey RegistryKeySoftware { get; set; }
         
@@ -19,13 +18,23 @@ namespace FechaFotos.Managers
             RegistryKeySoftware = RootLocalMachine.OpenSubKey("Software", true);
         }
 
-        public string GetKey(string keyName)
+        /// <summary>
+        /// Get a key value from the registry
+        /// </summary>
+        /// <param name="keyName"></param>
+        /// <returns></returns>
+        public string ReadKey(string keyName)
         {
             return RegistryKeySoftware?.GetValue(keyName) != null
                 ? RegistryKeySoftware.GetValue(keyName).ToString().Trim()
                 : Environment.CurrentDirectory;
         }
 
+        /// <summary>
+        /// Set a key value in the registry
+        /// </summary>
+        /// <param name="registryKey"></param>
+        /// <param name="value"></param>
         public void WriteKey(string registryKey, string value)
         {
             if (RegistryKeySoftware == null) return;

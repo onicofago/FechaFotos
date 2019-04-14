@@ -2,7 +2,6 @@
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-using Microsoft.Win32;
 using FechaFotos.Managers;
 
 namespace FechaFotos
@@ -16,7 +15,7 @@ namespace FechaFotos
         public FrmFechaFotos()
         {
             InitializeComponent();
-            txtCarpeta.Text = _regMgr.GetKey(RegistryKey);
+            txtCarpeta.Text = _regMgr.ReadKey(RegistryKey);
         }
 
          private void btnCancelar_Click(object sender, EventArgs e)
