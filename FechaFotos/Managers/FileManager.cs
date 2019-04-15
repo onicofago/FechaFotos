@@ -10,7 +10,7 @@ namespace FechaFotos.Managers
     public static class FileManager
     {
         /// <summary>
-        /// Validates a picture file
+        /// Validate a picture file
         /// </summary>
         /// <param name="file"></param>
         /// <returns></returns>
@@ -20,7 +20,7 @@ namespace FechaFotos.Managers
         }
 
         /// <summary>
-        /// Validates a proper camera file
+        /// Validate a proper camera file
         /// 20070608 * Changes filename format to handle NIKON (DSCN).
         /// 20080528 * Changes filename format to handle PANASONIC (DMC-LZ8).
         /// 20091014 * Changes filename format to handle either NIKON or PANASONIC.
@@ -37,7 +37,7 @@ namespace FechaFotos.Managers
         }
 
         /// <summary>
-        /// Returns a valid filename from EXIF data
+        /// Return a valid filename from EXIF data
         /// </summary>
         /// <param name="file"></param>
         /// <returns></returns>
