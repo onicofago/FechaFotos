@@ -1,8 +1,8 @@
-﻿using System;
+﻿using FechaFotos.Managers;
+using System;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-using FechaFotos.Managers;
 
 namespace FechaFotos
 {
